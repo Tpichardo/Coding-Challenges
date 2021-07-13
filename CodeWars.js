@@ -84,12 +84,14 @@ console.log(countSheeps([true, true, true, false, true, true, true, true]))
 //"Odd" for odd numbers.
 
 function even_or_odd(number) {
-    if (number % 2 === 0) {
-        return 'Even'
-    } else {
-        return 'Odd'
-    }
+    // if (number % 2 === 0) {
+    //     return 'Even'
+    // } else {
+    //     return 'Odd'
+    // }
 
+    //Secondary solution
+    return number % 2 === 0 ? 'Even' : 'Odd'
 }
 
-console.log(even_or_odd(3))
+console.log(even_or_odd(10))
