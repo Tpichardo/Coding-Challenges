@@ -1,5 +1,6 @@
 // Task
-// You need to create a function, helloWorld, that will return the String Hello, World! without actually using raw strings.This includes quotes, double quotes and template strings.You can, however, use the String constructor and any related functions.
+// You need to create a function, helloWorld, that will return the String Hello, World! without actually using raw strings.
+// This includes quotes, double quotes and template strings.You can, however, use the String constructor and any related functions.
 
 // You cannot use the following:
 
@@ -37,3 +38,15 @@ function findNeedle(haystack) {
 }
 
 console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
+
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. 
+// You're given one parameter, the original string.You don't have to worry with strings with less than two characters.
+
+
+
+function removeChar(str) {
+    //You got this!
+    return str.slice(1, -1)
+};
+
+console.log(removeChar("serendipity"))
