@@ -95,3 +95,10 @@ function even_or_odd(number) {
 }
 
 console.log(even_or_odd(10))
+
+//Write a function that multiplies two numbers
+function multiply(a, b) {
+    return a * b
+}
+
+console.log(multiply(5, 4))
