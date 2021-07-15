@@ -19,3 +19,24 @@ const factorial = (n) => {
     return n;
 };
 console.log(factorial(4));
+
+/*You will be given an array of numbers.You have to sort the odd numbers in ascending order 
+while leaving the even numbers at their original positions.*/
+
+
+const sortArray = (arr) => {
+    let newArr = [];
+    let i = 0
+    const oddArr = arr.filter(num => num % 2 !== 0).sort();
+    arr.forEach(elem => {
+        if (elem % 2 == 0) {
+            newArr.push(elem);
+        } else {
+            newArr.push(oddArr[i]);
+            i++
+        }
+    });
+    return newArr;
+};
+
+console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
