@@ -27,7 +27,7 @@ while leaving the even numbers at their original positions.*/
 const sortArray = (arr) => {
     let newArr = [];
     let i = 0
-    const oddArr = arr.filter(num => num % 2 !== 0).sort();
+    const oddArr = arr.filter(num => num % 2 !== 0).sort((a, b) => a - b);
     arr.forEach(elem => {
         if (elem % 2 == 0) {
             newArr.push(elem);
@@ -40,3 +40,4 @@ const sortArray = (arr) => {
 };
 
 console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
+console.log(sortArray([1, 11, 2, 8, 3, 4, 5]));
