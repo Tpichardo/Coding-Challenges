@@ -42,6 +42,9 @@ const sortArray = (arr) => {
 console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
 console.log(sortArray([1, 11, 2, 8, 3, 4, 5]));
 
+//write a function which accepts an array and a value, and return the index at which the value exists.
+// If the value does not exist in the array, return -1
+
 function linearSearch(arr, num) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === num) {
