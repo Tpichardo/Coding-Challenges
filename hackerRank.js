@@ -41,3 +41,14 @@ const sortArray = (arr) => {
 
 console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
 console.log(sortArray([1, 11, 2, 8, 3, 4, 5]));
+
+function linearSearch(arr, num) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === num) {
+            return `Found at index ${i}`
+        }
+    }
+    return -1
+}
+
+console.log(linearSearch([7, 9, 24, 12, 16, 8, 3], 12))
