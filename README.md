@@ -1,3 +1,3 @@
-# Coding-Challenges 👀
+# Coding-Challenges 🤔
 
-This is a repository of the coding challenges I have solved while working on strengthening my coding skills! 
+Coding challenges I have solved in order to strengthen my coding skills! 
