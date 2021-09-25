@@ -79,3 +79,52 @@ function multiply(a, b) {
 
 console.log(multiply(5, 4));
 
+const capitalizeName = (addedSnack) => {
+    let snackName = "freeCodeCamp is an awesome resource";
+    const words = snackName.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > 2) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+        }
+    }
+    snackName = words.join(" ");
+    console.log(snackName)
+    return snackName
+};
+
+console.log(capitalizeName("freeCodeCamp is an awesome resource"))
+
+// Find the sum of all multiples of n below m
+
+// Keep in Mind
+// n and m are natural numbers(positive integers)
+// m is excluded from the multiples
+
+function sumMul(n, m) {
+    if (n > m) return "INVALID";
+
+    //make a total
+    let total = 0
+
+    //make a loop
+    for (let i = n; i < m; i += n) {
+        //in every iteration get a multiple of n
+        //add it to a total
+        total += i
+    }
+    return total;
+
+    return 0;
+}
+//test for
+//"n is equal to m" return 0
+console.log(sumMul(2, 2))
+//"n is greater than m" return INVALID
+console.log(sumMul(10, 5))
+//"n is less than m and m is not a factor of n"
+console.log(sumMul(3, 13))
+console.log(sumMul(2, 9))
+//"n is greater than m" return INVALID
+console.log(sumMul(4, 3))
+//"n is less than m and m is a factor of n, but m is excluded from the sum"
+console.log(sumMul(2, 8))
