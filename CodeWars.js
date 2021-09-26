@@ -128,3 +128,33 @@ console.log(sumMul(2, 9))
 console.log(sumMul(4, 3))
 //"n is less than m and m is a factor of n, but m is excluded from the sum"
 console.log(sumMul(2, 8))
+
+
+function lastSurvivor(letters, coords) {
+    if (letters.length < 2) return letters
+
+    //iterate through coords in a for loop
+    for (let i = 0; i < coords.length; i++) {
+        //remove the chars from letters that macthes the index(num) in coords
+        if (coords[i] === 0) {
+            letters = letters.substring(1)
+            //to check if you are removing from the end
+        } else if (coords[i] === letters.length - 1) {
+            letters = letters.substring(0, letters.length - 1)
+        } else {
+            letters = letters.substring(0, coords[i]) + letters.substring(coords[i] + 1)
+        }
+    }
+    return letters;
+}
+
+
+//testing for
+//string of one character and an empty arr 
+console.log(lastSurvivor('b', []))
+//string of more than one character removing from the front
+console.log(lastSurvivor('abc', [0, 1]))
+//string of more than one character removing from the end
+console.log(lastSurvivor('def', [2]))
+//string of more than one character removing from the middle
+console.log(lastSurvivor('baby', [1, 2]))
