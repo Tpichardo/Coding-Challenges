@@ -158,3 +158,30 @@ console.log(lastSurvivor('abc', [0, 1]))
 console.log(lastSurvivor('def', [2]))
 //string of more than one character removing from the middle
 console.log(lastSurvivor('baby', [1, 2]))
+
+
+// Given a string S.You have to return another string such that even - indexed and odd - indexed characters of S are grouped and groups are space - separated(see sample below)
+
+// Note:
+// 0 is considered to be an even index. 
+// All input strings are valid with no spaces
+// input: 'CodeWars'
+// output 'CdWr oeas'
+
+
+function sortMyString(S) {
+    // your code here
+    let evenStr = ''
+    let oddStr = ''
+    for (let i = 0; i < S.length; i++) {
+        if (i % 2 === 1) {
+            evenStr += S[i]
+        } else {
+            oddStr += S[i]
+        }
+    }
+
+    return oddStr.concat(" ", evenStr);
+}
+
+console.log(sortMyString('CodeWars'))
