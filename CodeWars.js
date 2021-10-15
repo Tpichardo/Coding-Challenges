@@ -204,7 +204,8 @@ function createPhoneNumber(numbers) {
 console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
 
 
-// JavaScript Arrays support a filter function (starting in JavaScript 1.6). Use the filter functionality to complete the function given.
+/* JavaScript Arrays support a filter function (starting in JavaScript 1.6).
+ Use the filter functionality to complete the function given.*/
 
 // The solution would work like the following:
 
@@ -217,3 +218,23 @@ function getEvenNumbers(numbersArray) {
 }
 
 console.log(getEvenNumbers([1, 2, 3, 4, 5, 6, 7]))
+
+// Check if n is a square number 
+//return true or false
+/* In mathematics, a square number or perfect square is an integer that is the square of an integer;
+ in other words, it is the product of some integer with itself.*/
+
+var isSquare = function (n) {
+    let squareRoot = Math.sqrt(n)
+    if (n < 0) {
+        return false
+    } else if (Math.floor(squareRoot) ** 2 === n) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+console.log(isSquare(25))
+console.log(isSquare(26))
