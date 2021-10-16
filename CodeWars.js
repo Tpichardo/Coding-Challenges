@@ -338,3 +338,24 @@ console.log(validSpacing(' Hello World'))
 console.log(validSpacing('Hello  World'))
 console.log(validSpacing('Hello World'))
 
+
+/*Write a function that takes in a string of one or more words, and returns the same string, 
+but with all five or more letter words reversed(like the name of this kata).*/
+
+/*Strings passed in will consist of only letters and spaces.
+Spaces will be included only when more than one word is present.*/
+
+function spinWords(string) {
+    let newStrArr = []
+    let strArr = string.split(' ')
+    for (const word of strArr) {
+        if (word.length >= 5) {
+            newStrArr.push(word.split('').reverse().join(''))
+        } else {
+            newStrArr.push(word)
+        }
+    }
+    return newStrArr.join(' ')
+}
+
+console.log(spinWords("Hey fellow warriors"))
