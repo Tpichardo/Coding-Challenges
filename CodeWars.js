@@ -382,14 +382,10 @@ If there are no good ideas, as is often the case, return 'Fail!'.*/
 
 
 function well(x) {
-    let goodIdeas = 0
-    if (!x.includes('good')) {
-        return 'Fail!'
-    }
-    for (let i = 0; i < x.length; i++) {
-        if (x[i] === 'good') {
-            goodIdeas += 1
-        }
-    }
-    return goodIdeas > 2 ? 'I smell a series!' : 'Publish!'
+    const goodCount = x.filter(word => word === 'good').length
+    return goodCount < 1 ? 'Fail!' : goodCount > 2 ? 'I smell a series!' : 'Publish!'
 }
+
+console.log(well(['good', 'good', 'good']))
+console.log(well(['bad', 'bad', 'good']))
+console.log(well(['bad', 'bad', 'bad']))
