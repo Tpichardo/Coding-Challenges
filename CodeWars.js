@@ -359,3 +359,18 @@ function spinWords(string) {
 }
 
 console.log(spinWords("Hey fellow warriors"))
+
+/*Write a function that takes an array of strings as an argument and returns a filtered array 
+containing the same elements but with the 'geese' removed.*/
+
+// The geese are any strings in the following array, which is pre - populated in your solution:
+
+// geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+
+
+function gooseFilter(birds) {
+    var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    return birds.filter(word => !geese.includes(word));
+};
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
