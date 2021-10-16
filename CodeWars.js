@@ -311,3 +311,30 @@ function iqTest(numbers) {
 
 console.log(iqTest("2 4 7 8 10"))
 console.log(iqTest("1 2 2"))
+
+/*Your task is to write a function, which checks if a string has valid spacing.
+The function should return either True or False.*/
+
+/*For this kata, the definition of valid spacing is one space between words, 
+and no leading or trailing spaces.Below are some examples of what the function should return.*/
+
+function validSpacing(s) {
+    return s.trim() === s && !s.includes('  ')
+
+
+
+    // Initial Solution
+    // if (s[0] === '' || s[s.length - 1] === '') {
+    //     return false
+    // } else if (s[0] === ' ' || s[s.length - 1] === ' ') {
+    //     return false
+    // } else if (s.includes('  ')) {
+    //     return false
+    // }
+    // return true
+}
+
+console.log(validSpacing(' Hello World'))
+console.log(validSpacing('Hello  World'))
+console.log(validSpacing('Hello World'))
+
