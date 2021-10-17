@@ -410,3 +410,12 @@ function XO(str) {
 
 console.log(XO("ooxXm"))
 console.log(XO("xooxx"))
+
+
+// Given an array of integers, return a new array with each value doubled.
+
+function maps(x) {
+    return x.map((x) => x * 2)
+}
+
+console.log(maps([1, 2, 3]))
