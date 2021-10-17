@@ -419,3 +419,20 @@ function maps(x) {
 }
 
 console.log(maps([1, 2, 3]))
+
+
+
+function twoSort(s) {
+    let newStr = ''
+    for (let i = 0; i < s.length; i++) {
+        if (i === s.length - 1) {
+            newStr += s[i]
+        } else {
+            newStr += s[i] + '***'
+        }
+    }
+    return newStr
+}
+
+console.log(twoSort('bitcoin'))
+console.log(twoSort('hello'))
