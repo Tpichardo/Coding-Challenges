@@ -463,7 +463,6 @@ function countPositivesSumNegatives(input) {
 console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
 
 
-
 /*Write function splitSentence which will create a list of strings from a string.
 Example:
 
@@ -473,3 +472,21 @@ function splitSentence(s) {
     return s.split(' ');
 }
 
+
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+
+function wave(str) {
+    let waveArr = []
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === ' ') {
+            continue;
+        } else {
+            waveArr.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1))
+        }
+    }
+    return waveArr
+}
+
+console.log(wave("Hello"))
+
+console.log(wave(" Gap "))
