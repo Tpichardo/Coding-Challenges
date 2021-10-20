@@ -514,3 +514,17 @@ function boolToWord(bool) {
 
 console.log(boolToWord(false))
 console.log(boolToWord(true))
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+function numbers(nums) {
+    let numArr = nums.split(' ')
+    return `${Math.max(...numArr)} ${Math.min(...numArr)}`
+
+    // let str = ''
+    // let numArr = nums.split(' ').sort((a, b) => b - a)
+
+    // str += numArr[0] + ' ' + numArr[numArr.length - 1]
+    // return str
+}
+console.log(numbers("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
