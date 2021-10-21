@@ -528,3 +528,22 @@ function numbers(nums) {
     // return str
 }
 console.log(numbers("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+
+/*Complete the method which returns the number which is most frequent in the given input array.
+If there is a tie for most frequent number, return the largest number among them.*/
+
+function highestRank(arr) {
+    let obj = {}
+    for (let i = 0; i < arr.length; i++) {
+        if (obj[arr[i]] === undefined) {
+            obj[arr[i]] = 1
+        } else {
+            obj[arr[i]] += 1
+        }
+    }
+
+    return Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b);
+}
+
+console.log(highestRank([12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]))
