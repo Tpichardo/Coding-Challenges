@@ -602,3 +602,15 @@ function halvingSum(n) {
 }
 
 console.log(halvingSum(25))
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+function sumMix(x) {
+    let sum = 0
+    for (let i = 0; i < x.length; i++) {
+        sum += Number(x[i])
+    }
+    return sum
+}
+
+console.log(sumMix(['2', 3, 6, '7', '10', 10]))
