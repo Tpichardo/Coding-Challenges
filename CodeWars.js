@@ -583,3 +583,22 @@ console.log(likes(['Alex', 'Jacob']))
 console.log(likes(['Alex', 'Jacob', 'Mark']))
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'Luis', 'John']))
+
+
+
+// Given a positive integer n, calculate the following sum:
+// n + n / 2 + n / 4 + n / 8 + ...
+// All elements of the sum are the results of integer division.
+
+// 25  => 25 + 12 + 6 + 3 + 1 = 47
+
+function halvingSum(n) {
+    let sum = 0;
+    while (n >= 1) {
+        sum += n;
+        n = Math.floor(n / 2);
+    }
+    return sum;
+}
+
+console.log(halvingSum(25))
