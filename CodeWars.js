@@ -624,3 +624,26 @@ function solution(nums) {
 }
 
 console.log(solution([1, 2, 10, 50, 5]))
+
+
+
+// C.....m returns 'Escaped!' < --more than three characters between
+
+// C...m returns 'Caught!' < --as there are three characters between the two, the cat can jump.
+
+function catMouse(x) {
+    let spaces = 0
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] === '.') {
+            spaces += 1
+        }
+    }
+    if (spaces > 3) {
+        return 'Escaped!'
+    } else {
+        return 'Caught!'
+    }
+}
+
+console.log(catMouse('C...m'))
+console.log(catMouse('C....M'))
