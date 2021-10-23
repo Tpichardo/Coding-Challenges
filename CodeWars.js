@@ -656,3 +656,18 @@ function opposite(number) {
 
 console.log(opposite(-1))
 console.log(opposite(5))
+
+
+// Write a function called repeatStr which repeats the given string string exactly n times.
+
+function repeatStr(n, s) {
+    return s.repeat(n)
+
+    // let newStr = ''
+    // for (let i = 0; i < n; i++) {
+    //     newStr += s
+    // }
+    // return newStr;
+}
+
+console.log(repeatStr(7, 'I'))
