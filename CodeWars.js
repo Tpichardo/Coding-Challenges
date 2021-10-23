@@ -647,3 +647,12 @@ function catMouse(x) {
 
 console.log(catMouse('C...m'))
 console.log(catMouse('C....M'))
+
+// Very simple, given a number, find its opposite
+
+function opposite(number) {
+    return number * -1
+}
+
+console.log(opposite(-1))
+console.log(opposite(5))
