@@ -701,3 +701,11 @@ function hoopCount(n) {
 
 console.log(hoopCount(11))
 console.log(hoopCount(3))
+
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+function removeExclamationMarks(s) {
+    return s.split('!').join('');
+}
+
+console.log(removeExclamationMarks('hello!'))
