@@ -709,3 +709,34 @@ function removeExclamationMarks(s) {
 }
 
 console.log(removeExclamationMarks('hello!'))
+
+
+
+// Your mission is simple: write a function that takes an integer 'n' and returns 'n!'.
+
+function factorial(n, product = 1) {
+    if (n < 0) {
+        return null
+    }
+
+    if (n === 0) {
+        return 1
+    }
+
+    return n * factorial(n - 1)
+
+    // if (n < 0) {
+    //     return null
+    // }
+
+    // if (n === 0) {
+    //     return product
+    // }
+
+    // product *= n
+
+    // return factorial(n - 1, product)
+
+}
+
+console.log(factorial(5))
