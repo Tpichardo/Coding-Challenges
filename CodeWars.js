@@ -768,3 +768,17 @@ function find(a, b, i = 0) {
 }
 
 console.log(find([1, 2, 3, 4, 5, 10, 11], 10))
+
+/*Reverse every other word in a given string, then return the string.
+Throw away any leading or trailing whitespace, while ensuring there is exactly one space between each word.
+Punctuation marks should be treated as if they are a part of the word in this kata.*/
+
+function reverse(str) {
+    let strArr = str.split(' ')
+    for (let i = 1; i < strArr.length; i += 2) {
+        strArr[i] = strArr[i].split('').reverse().join('')
+    }
+    return strArr.join(' ')
+}
+
+console.log(reverse('Reverse this string, please!'))
