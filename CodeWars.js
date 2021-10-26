@@ -758,3 +758,13 @@ function modifyMultiply(str, loc, num) {
 }
 
 console.log(modifyMultiply('This is a string', 3, 5))
+
+/*Provided is a function find which accepts two parameters in the following order: array, element
+ and returns the index of the element if found and "Not found" otherwise.
+ Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata.
+(no more than 85) You may assume that all array elements are unique.*/
+function find(a, b, i = 0) {
+    return a.indexOf(b) >= 0 ? a.indexOf(b) : "Not found"
+}
+
+console.log(find([1, 2, 3, 4, 5, 10, 11], 10))
