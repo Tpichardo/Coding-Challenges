@@ -740,3 +740,21 @@ function factorial(n, product = 1) {
 }
 
 console.log(factorial(5))
+
+
+// modifyMultiply("This is a string", 3, 5)
+
+// Should return
+
+// "string-string-string-string-string"
+
+function modifyMultiply(str, loc, num) {
+    let newStr = ''
+    let word = str.split(' ')
+    for (let i = 0; i < num; i++) {
+        newStr += word[loc] + '-'
+    }
+    return newStr.slice(0, -1)
+}
+
+console.log(modifyMultiply('This is a string', 3, 5))
