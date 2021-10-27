@@ -807,3 +807,63 @@ function nameIndeces(names) {
     return object
 }
 console.log(nameIndeces(["Charlie", "Ida", "Charlie", "Ida", "Patrice", "Charlie"]))
+
+
+// square() must return a copy of the array, containing all values squared
+// cube() must return a copy of the array, containing all values cubed
+// average() must return the average of all array values; on an empty array must return NaN(note: the empty array is not tested in Ruby!)
+// sum() must return the sum of all array values
+// even() must return an array of all even numbers
+// odd() must return an array of all odd numbers
+
+Array.prototype.square = function () {
+    return this.map(num => num ** 2)
+}
+
+Array.prototype.cube = function () {
+    return this.map(num => num ** 3)
+}
+
+Array.prototype.average = function () {
+    let sum = 0
+    for (let i = 0; i < this.length; i++) {
+        sum += this[i]
+    }
+    return sum / (this.length)
+}
+
+Array.prototype.sum = function () {
+    let sum = 0
+    for (let i = 0; i < this.length; i++) {
+        sum += this[i]
+    }
+    return sum
+}
+
+Array.prototype.even = function () {
+    let arr = []
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] % 2 === 0) {
+            arr.push(this[i])
+        }
+    }
+    return arr
+}
+
+Array.prototype.odd = function () {
+    let arr = []
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] % 2 === 1) {
+            arr.push(this[i])
+        }
+    }
+    return arr
+}
+
+let helpersArr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+console.log(helpersArr.sum())
+console.log(helpersArr.even())
+console.log(helpersArr.cube())
+console.log(helpersArr.square())
+console.log(helpersArr.odd())
+console.log(helpersArr.average())
