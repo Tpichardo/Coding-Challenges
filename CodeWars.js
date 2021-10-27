@@ -782,3 +782,28 @@ function reverse(str) {
 }
 
 console.log(reverse('Reverse this string, please!'))
+
+
+/*Write a function that will return an object containing the indices of all duplicate elements.
+The keys are the duplicate elements; the values are arrays of their indices in ascending order.*/
+
+function nameIndeces(names) {
+    // Initialize an object
+    let object = {}
+    //Loop through the array 
+    for (let i = 0; i < names.length; i++) {
+        //First check if the key exist in the object
+        if (object[names[i]] === undefined) {
+            //If it doesn't, add the key and value
+            // Make names[i] the key
+            //Add i as a value for names[i]
+            object[names[i]] = [i]
+        }
+        else {
+            // If it does just add the value
+            object[names[i]].push(i)
+        }
+    }
+    return object
+}
+console.log(nameIndeces(["Charlie", "Ida", "Charlie", "Ida", "Patrice", "Charlie"]))
