@@ -867,3 +867,12 @@ console.log(helpersArr.cube())
 console.log(helpersArr.square())
 console.log(helpersArr.odd())
 console.log(helpersArr.average())
+
+// Given the string representations of two integers, return the string representation of the sum of those integers.
+//Should work for big numbers
+function sumStrings(a, b) {
+    let sum = BigInt(a) + BigInt(b)
+    return sum.toString()
+}
+
+console.log(sumStrings('2', '3'))
