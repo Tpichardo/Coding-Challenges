@@ -888,3 +888,18 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 }
 
 console.log(twiceAsOld(36, 7))
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+function disemvowel(str) {
+    let newStr = ''
+    for (let i = 0; i < str.length; i++) {
+        if ('aeiou'.includes(str[i].toLowerCase())) {
+            continue;
+        } else {
+            newStr += str[i]
+        }
+    }
+    return newStr
+}
+
+console.log(disemvowel('This is so much fun!'))
