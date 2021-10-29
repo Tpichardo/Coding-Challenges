@@ -903,3 +903,22 @@ function disemvowel(str) {
 }
 
 console.log(disemvowel('This is so much fun!'))
+
+/*You will be given a string and your task is to check if it is possible to convert that string into a palindrome 
+by removing a single character.If the string is already a palindrome, return "OK".
+If it is not, and we can convert it to a palindrome by removing one character, then return "remove one", 
+otherwise return "not possible".The order of the characters should not be changed.*/
+
+function solve(s) {
+    if (s.split('').reverse().join('') === s) return "OK"
+    for (let i = 0; i < s.length; i++) {
+        let removed = s.substring(0, i) + s.substring(i + 1);
+
+        if (removed === removed.split('').reverse().join('')) {
+            return 'remove one';
+        }
+    }
+    return 'not possible';
+}
+
+console.log(solve('racecar'))
