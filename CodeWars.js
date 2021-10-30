@@ -922,3 +922,18 @@ function solve(s) {
 }
 
 console.log(solve('racecar'))
+
+/*Create a function that accepts 2 string arguments and returns an integer of the count of occurrences 
+the 2nd argument is found in the first one.*/
+function strCount(str, letter) {
+    return str.split(letter).length - 1
+    // let times = 0
+    // for (let i = 0; i < str.length; i++) {
+    //     if (letter.includes([str[i]])) {
+    //         times += 1
+    //     }
+    // }
+    // return times
+}
+
+console.log(strCount('', 'o'))
