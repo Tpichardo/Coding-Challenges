@@ -937,3 +937,18 @@ function strCount(str, letter) {
 }
 
 console.log(strCount('', 'o'))
+
+
+// Build a function that returns an array of integers from n to 1 where n > 0.
+
+const reverseSeq = n => {
+    let arr = []
+    let i = n
+    while (n >= 1) {
+        arr.push(n)
+        n -= 1
+    }
+    return arr;
+};
+
+console.log(reverseSeq(10))
