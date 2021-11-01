@@ -1025,3 +1025,19 @@ function distinct(a) {
 }
 
 console.log(distinct([1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 7, 8, 9, 10, 10]))
+
+/*Given a non - negative integer, 3 for example, return a string with a murmur: 
+"1 sheep...2 sheep...3 sheep...".Input will always be valid, i.e.no negative integers.*/
+
+var countSheep = function (num) {
+    let str = ''
+    let loops = 1
+    while (loops <= num) {
+        str += `${loops} sheep...`
+        loops++
+    }
+    return str
+}
+
+console.log(countSheep(5))
+
