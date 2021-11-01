@@ -976,4 +976,20 @@ function removeEveryOther(arr) {
 
 console.log(removeEveryOther(['hey', 1, 2, 3, 4, 5, 6, 'bye']))
 
+// Create a function called shortcut to remove all the lowercase vowels in a given string.
+
+function shortcut(string) {
+    let newStr = ''
+    for (let i = 0; i < string.length; i++) {
+        if ("aeiou".includes(string[i].toLowerCase())) {
+            continue;
+        } else {
+            newStr += string[i]
+        }
+    }
+    return newStr
+}
+
+console.log(shortcut('animals'))
+
 
