@@ -1002,4 +1002,9 @@ console.log(reverseList([1, 2, 3, 4, 5, 6]))
 
 
 
+// Replace all vowel to exclamation mark in the sentence.aeiouAEIOU is vowel.
+function replace(s) {
+    return s.replace(/[aeoiu]/gi, '!')
+}
 
+console.log(replace('This is a string'))
