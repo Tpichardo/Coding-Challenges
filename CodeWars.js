@@ -964,3 +964,16 @@ function getAge(inputString) {
 }
 
 console.log(getAge('5 years old'))
+
+// Take an array and remove every second element from the array.Always keep the first element and start removing with the next element.
+function removeEveryOther(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i += 2) {
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+
+console.log(removeEveryOther(['hey', 1, 2, 3, 4, 5, 6, 'bye']))
+
+
