@@ -1086,3 +1086,63 @@ function digitize(n) {
     return n.toString().split('').map(str => Number(str)).reverse()
 }
 console.log(digitize([795843]))
+
+const letters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "a",
+];
+const findLetter = (letter) => letter === 'a'
+console.log(letters.findIndex(findLetter))
+
+const findIndex = (arr, item) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === item) {
+            return i;
+        }
+    }
+    return -1;
+};
+
+console.log(findIndex(letters, "a"));
+console.log(findIndex(letters, "f"));
+console.log(findIndex(letters, 5));
+
+
+
+/*Your task is to make a function that can take any non - negative integer as an argument and return it with its digits in descending order.
+Essentially, rearrange the digits to create the highest possible number.*/
+
+function descendingOrder(n) {
+    //...
+    let numArr = n.toString().split('')
+    let sortedStr = numArr.sort((a, b) => b - a).join('')
+    return Number(sortedStr)
+}
+
+console.log(descendingOrder(42145))
+console.log(descendingOrder(145263))
