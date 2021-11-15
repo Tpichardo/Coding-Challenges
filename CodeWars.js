@@ -1158,3 +1158,23 @@ function twoDecimalPlaces(n) {
 console.log(twoDecimalPlaces(5.5589))
 console.log(twoDecimalPlaces(3.3424))
 
+
+/*Given a two - dimensional array of integers,
+ return the flattened version of the array with all the integers in the sorted(ascending) order.*/
+
+function flattenAndSort(array) {
+    // Good luck, brave code warrior!
+    let unsortedArr = []
+    for (let i = 0; i < array.length; i++) {
+        let currentArr = array[i]
+        console.log(currentArr)
+        for (let j = 0; j < currentArr.length; j++) {
+            unsortedArr.push(currentArr[j])
+        }
+    }
+
+    return unsortedArr.sort((a, b) => a - b)
+}
+
+console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]))
+
