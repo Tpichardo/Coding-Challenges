@@ -1146,3 +1146,15 @@ function descendingOrder(n) {
 
 console.log(descendingOrder(42145))
 console.log(descendingOrder(145263))
+
+
+/*Each number should be formatted that it is rounded to two decimal places.
+You don't need to check whether the input is a valid number because only valid numbers are used in the tests.*/
+
+function twoDecimalPlaces(n) {
+    return Number(n.toFixed(2))
+}
+
+console.log(twoDecimalPlaces(5.5589))
+console.log(twoDecimalPlaces(3.3424))
+
