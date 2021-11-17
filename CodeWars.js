@@ -1163,11 +1163,9 @@ console.log(twoDecimalPlaces(3.3424))
  return the flattened version of the array with all the integers in the sorted(ascending) order.*/
 
 function flattenAndSort(array) {
-    // Good luck, brave code warrior!
     let unsortedArr = []
     for (let i = 0; i < array.length; i++) {
         let currentArr = array[i]
-        console.log(currentArr)
         for (let j = 0; j < currentArr.length; j++) {
             unsortedArr.push(currentArr[j])
         }
@@ -1178,3 +1176,38 @@ function flattenAndSort(array) {
 
 console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]))
 
+
+// Write a function that takes an integer and then returns an array of all the prime numbers up to that value.
+
+const isPrime = (num) => {
+    //create a for loop that loops as many times as the sqare root of num
+    //the square root of a number is the biggest number that it could be divisible by 
+    //This will shorten the time complexity because you wont have to loop all the way until the num
+    //Start the for loop at 2 b/c prime numbers are greater than 1
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    //this makes sure that num is greater than 1, since all prime numbers are greater than 1
+    //if num is less than 1 it will return false, which means that the number is not prime ONLY b/c it's less than 1
+    // ex: -3 would allow this function to NEVER enter the CONDITIONAL because 3 is a prime number, but in the end
+    //the fucntion will rerturn false b/c -3 is less than 1
+    return num > 1
+}
+
+const printPrimesArr = (num) => {
+    // 2 is the only even number that is prime
+    //so array gets initialize with 2
+    let primesArr = [2]
+    //for loop starts from 3 and increases by 2 each time since even numbers are not prime
+    for (let i = 3; i <= num; i += 2) {
+        //if the number/i is prime/ if isItPrime() returns true
+        if (isPrime(i)) {
+            // push the number/i into the aaray
+            primesArr.push(i);
+        }
+    }
+    return primesArr;
+}
+console.log(printPrimesArr(15))
