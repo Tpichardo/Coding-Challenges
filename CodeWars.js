@@ -1245,23 +1245,31 @@ console.log(fizzbuzz(15))
 // Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
 
 function findLargestProduct(inputArray) {
-    let currentProduct;
-    let prevProduct;
-    let largestProduct;
+    // let currentProduct;
+    // let prevProduct;
+    // let largestProduct;
     let i = 0
+    let product = inputArray[0] * inputArray[1]
     while (inputArray[i + 1] !== undefined) {
-        currentProduct = inputArray[i] * inputArray[i + 1]
-        console.log(currentProduct)
-        if (prevProduct === undefined) {
-            prevProduct = currentProduct
-            largestProduct = currentProduct
-        } else if (prevProduct <= currentProduct) {
-            largestProduct = currentProduct
-            prevProduct = currentProduct
-        }
+        //refactored solution
+        product = Math.max(product, inputArray[i] * inputArray[i + 1])
         i++
+
+
+        // currentProduct = inputArray[i] * inputArray[i + 1]
+        // console.log(currentProduct)
+        // if (prevProduct === undefined) {
+        //     prevProduct = currentProduct
+        //     largestProduct = currentProduct
+        // } else if (prevProduct <= currentProduct) {
+        //     largestProduct = currentProduct
+        //     prevProduct = currentProduct
+        // }
+        // i++
+
     }
-    return largestProduct
+    return product
+    // return largestProduct
 }
 
 console.log(findLargestProduct([-23, 4, -3, 8, -12])) // => -12
