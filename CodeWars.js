@@ -714,32 +714,32 @@ console.log(removeExclamationMarks('hello!'))
 
 // Your mission is simple: write a function that takes an integer 'n' and returns 'n!'.
 
-function factorial(n, product = 1) {
-    if (n < 0) {
-        return null
-    }
+// function factorial(n, product = 1) {
+//     if (n < 0) {
+//         return null
+//     }
 
-    if (n === 0) {
-        return 1
-    }
+//     if (n === 0) {
+//         return 1
+//     }
 
-    return n * factorial(n - 1)
+//     return n * factorial(n - 1)
 
-    // if (n < 0) {
-    //     return null
-    // }
+//     // if (n < 0) {
+//     //     return null
+//     // }
 
-    // if (n === 0) {
-    //     return product
-    // }
+//     // if (n === 0) {
+//     //     return product
+//     // }
 
-    // product *= n
+//     // product *= n
 
-    // return factorial(n - 1, product)
+//     // return factorial(n - 1, product)
 
-}
+// }
 
-console.log(factorial(5))
+// console.log(factorial(5))
 
 
 // modifyMultiply("This is a string", 3, 5)
@@ -1211,3 +1211,32 @@ const printPrimesArr = (num) => {
     return primesArr;
 }
 console.log(printPrimesArr(15))
+
+
+// Return an array containing the numbers from 1 to N, where N is the parametered value.
+
+// Replace certain values however if any of the following conditions are met:
+
+/*If the value is a multiple of 3: use the value "Fizz" instead
+If the value is a multiple of 5: use the value "Buzz" instead
+If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead*/
+
+function fizzbuzz(n) {
+    let numsArr = [];
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            numsArr.push('FizzBuzz')
+        } else if (i % 3 === 0) {
+            numsArr.push('Fizz')
+        } else if (i % 5 === 0) {
+            numsArr.push('Buzz')
+        } else {
+            numsArr.push(i)
+        }
+    }
+    return numsArr
+}
+
+console.log(fizzbuzz(5))
+console.log(fizzbuzz(10))
+console.log(fizzbuzz(15))
