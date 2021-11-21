@@ -1277,3 +1277,25 @@ console.log(findLargestProduct([-1, -2])) // => 2
 console.log(findLargestProduct([5, 1, 2, 3, 1, 4])) // => 6
 console.log(findLargestProduct([9, 5, 10, 2, 24, -1, -48])) // => 50
 console.log(findLargestProduct([1, 0, 1, 0, 1000])) // => 0
+
+
+
+
+/*In this kata you get the start number and the end number of a region and should 
+return the count of all numbers except numbers with a 5 in it.
+The start and the end number are both inclusive!*/
+function dontGiveMeFive(start, end) {
+    let arr = []
+    let i = start
+    while (i <= end) {
+        let str = i + ''
+        if (!str.includes(5)) {
+            arr.push(i + '')
+        }
+        i++
+    }
+    return arr.length;
+}
+
+console.log(dontGiveMeFive(4, 17))
+console.log(dontGiveMeFive(1, 9))
