@@ -1285,16 +1285,16 @@ console.log(findLargestProduct([1, 0, 1, 0, 1000])) // => 0
 return the count of all numbers except numbers with a 5 in it.
 The start and the end number are both inclusive!*/
 function dontGiveMeFive(start, end) {
-    let arr = []
-    let i = start
+    let count = 0;
+    let i = start;
     while (i <= end) {
-        let str = i + ''
+        let str = i + '';
         if (!str.includes(5)) {
-            arr.push(i + '')
+            count++;
         }
-        i++
+        i++;
     }
-    return arr.length;
+    return count;
 }
 
 console.log(dontGiveMeFive(4, 17))
