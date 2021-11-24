@@ -1320,3 +1320,26 @@ function isDivisible(n, x, y) {
 
 console.log(isDivisible(3, 3, 4))
 console.log(isDivisible(12, 3, 4))
+
+//Take a number and check each digit if it is divisible by the digit on its left checked and return an array of booleans.
+
+//The booleans should always start with false becase there is no digit before the first one.
+
+function divisibleByLast(n) {
+    // n = n + ''
+    // let newArr = [false]
+    // for (let i = 1; i < n.length; i++) {
+    //     if (n[i] % n[i - 1] === 0) {
+    //         newArr.push(true)
+    //     } else {
+    //         newArr.push(false)
+    //     }
+    // }
+    // return newArr
+    // refactored
+    return n.toString().split('').map((x, i, arr) => x % arr[i - 1] === 0)
+
+}
+
+console.log(divisibleByLast(73312))
+console.log(divisibleByLast(2026))
