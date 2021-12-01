@@ -1355,3 +1355,42 @@ function smallEnough(a, limit) {
 console.log(smallEnough([66, 101], 200))
 console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100))
 console.log(smallEnough([101, 45, 75, 105, 99, 107], 107))
+
+function calculatee(str) {
+
+    let strArr;
+    let newStr = 0
+    if (str.includes('plus')) {
+        strArr = str.split('plus')
+        for (let i = 0; i < strArr.length; i++) {
+            if (strArr[i + 1] !== undefined)
+                newStr += strArr[i] + strArr[i + 1]
+        }
+    } else if (str.includes('minus')) {
+        strArr = str.split('minus')
+        console.log(strArr)
+        for (let i = 0; i < strArr.length; i++) {
+            if (strArr[i + 1] !== undefined) {
+                console.log(strArr[i])
+                console.log(newStr)
+                newStr += strArr[i] - strArr[i + 1]
+                console.log(newStr)
+            }
+        }
+    }
+    return newStr;
+}
+
+calculatee('3minus2minus5')
+
+
+/*Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if 
+a given non-negative integer is a power of two.*/
+function isPowerOfTwo(n) {
+    //.. should return true or false ..
+    return Number.isInteger(Math.log2(n))
+}
+
+console.log(isPowerOfTwo(2))
+console.log(isPowerOfTwo(5))
+console.log(isPowerOfTwo(4096))
