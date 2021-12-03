@@ -1394,3 +1394,23 @@ function isPowerOfTwo(n) {
 console.log(isPowerOfTwo(2))
 console.log(isPowerOfTwo(5))
 console.log(isPowerOfTwo(4096))
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+//String will never be empty and you do not need to account for different data types.
+
+function findShort(s) {
+    let stringArray = s.split(' ')
+    let minString = stringArray[0].length
+
+    for (let i = 1; i < stringArray.length; i++) {
+        if (stringArray[i].length < minString) {
+            minString = stringArray[i].length
+        }
+    }
+    return minString
+}
+
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+console.log(findShort("turns out random test cases are easier than writing out basic ones"))
+console.log(findShort("Let's travel abroad shall we"))
