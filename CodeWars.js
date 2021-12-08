@@ -1452,3 +1452,19 @@ function none(arr, fun) {
 
 console.log(none([1, 2, 3, 4, 5], function (item) { return item > 5 }))
 console.log(none([1, 2, 3, 4, 5], function (item) { return item > 4 }))
+
+
+//Your task is to find the first element of an array that is not consecutive.
+function firstNonConsecutive(arr) {
+    //loop through the array 
+    //if arr[i + 1] !== arr[i] + 1 return arr[i + 1]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i + 1] !== undefined && arr[i + 1] !== arr[i] + 1) {
+            return arr[i + 1]
+        }
+    }
+    return null
+}
+
+console.log(firstNonConsecutive(2, 3, 4, 5, 6, 7, 8, 9, 10))
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
