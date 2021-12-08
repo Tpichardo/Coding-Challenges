@@ -1415,10 +1415,27 @@ console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
 console.log(findShort("turns out random test cases are easier than writing out basic ones"))
 console.log(findShort("Let's travel abroad shall we"))
 
-
+/***You will be given a vector of strings.You must sort it alphabetically(case -sensitive, and based on the ASCII values of the chars) 
+ * and then return the first value. The returned value must be a string, and have "***" between each of its letters.
+ * You should not remove or add elements from / to the array.*/
 function toSort(s) {
     return s.sort()[0].split('').join('***')
 }
 
+
 console.log(toSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
 console.log(toSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]))
+
+/***Create a method all which takes two params:
+ * a sequence
+ * a function (function pointer in C)
+ * and returns true if the function in the params returns true for every element in the sequence. 
+ * Otherwise, it should return false. If the sequence is empty, it should return true, since technically nothing failed the test. */
+
+function all(arr, fun) {
+    // ...
+    return arr.every(fun);
+}
+
+console.log(all([1, 2, 3, 4, 5], function (v) { return v < 9 }), true)
+console.log(all([1, 2, 3, 4, 5], function (v) { return v > 9 }), false)
