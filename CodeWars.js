@@ -1437,5 +1437,18 @@ function all(arr, fun) {
     return arr.every(fun);
 }
 
-console.log(all([1, 2, 3, 4, 5], function (v) { return v < 9 }), true)
-console.log(all([1, 2, 3, 4, 5], function (v) { return v > 9 }), false)
+console.log(all([1, 2, 3, 4, 5], function (v) { return v < 9 }))
+console.log(all([1, 2, 3, 4, 5], function (v) { return v > 9 }))
+
+/**
+ * Create a method none? (JS none) that accepts an array and a block (JS: a function),
+ *  and returns true if the block (/function) returns true for none of the items in the array. 
+ * An empty list should return true.
+ */
+
+function none(arr, fun) {
+    return !arr.some(fun)
+}
+
+console.log(none([1, 2, 3, 4, 5], function (item) { return item > 5 }))
+console.log(none([1, 2, 3, 4, 5], function (item) { return item > 4 }))
