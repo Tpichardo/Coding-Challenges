@@ -1468,3 +1468,25 @@ function firstNonConsecutive(arr) {
 
 console.log(firstNonConsecutive(2, 3, 4, 5, 6, 7, 8, 9, 10))
 console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
+
+/**
+ * the numbers in strange mathematics are not ordered in ascending order, but lexicographically
+ * write a function that receives two integer numbers:
+ *  n (total amount of numbers in strange mathematics) and k (number from sequence) 
+ * and returns the location of a given number k in the order defined in strange mathematics.
+ */
+
+function strangeMath(n, k) {
+    let arr = []
+    let count = 1
+    while (count <= n) {
+        arr.push(count)
+        count++
+    }
+    return arr.sort().indexOf(k) + 1
+}
+
+console.log(strangeMath(11, 2))
+console.log(strangeMath(15, 5))
+console.log(strangeMath(15, 15))
+
