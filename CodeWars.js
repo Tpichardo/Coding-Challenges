@@ -1490,3 +1490,21 @@ console.log(strangeMath(11, 2))
 console.log(strangeMath(15, 5))
 console.log(strangeMath(15, 15))
 
+/**You will be given an array of numbers.
+ * For each number in the array you will need to create an object.
+ * The object key will be the number, as a string. The value will be the corresponding character code, as a string.
+ * Return an array of the resulting objects. */
+
+function numObj(s) {
+    let arr = []
+    for (let i = 0; i < s.length; i++) {
+
+        arr.push({ [s[i]]: String.fromCharCode(s[i]) })
+
+    }
+    return arr
+}
+
+console.log(numObj([118, 117, 120]))
+console.log(numObj([101, 121, 110, 113, 113, 103]))
+
