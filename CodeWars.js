@@ -1525,3 +1525,13 @@ console.log(getMiddle("middle"))
 console.log(getMiddle("test"))
 console.log(getMiddle("testing"))
 
+
+/**Write a function that accepts two integers and returns the remainder of dividing the larger value by the smaller value.
+
+Division by zero should return NaN. */
+function remainder(a, b) {
+    return a > b ? a % b : b % a;
+}
+
+console.log(remainder(17, 5))
+console.log(remainder(0, -1))
