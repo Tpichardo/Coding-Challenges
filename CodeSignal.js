@@ -15,6 +15,8 @@ function shapeArea(n) {
     return area
 }
 
-console.log(solution(1)) //--> 1
-console.log(solution(2)) //--> 5
-console.log(solution(3)) //--> 13
+console.log(shapeArea(1)) //--> 1
+console.log(shapeArea(2)) //--> 5
+console.log(shapeArea(3)) //--> 13
+
+
