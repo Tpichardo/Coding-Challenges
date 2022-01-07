@@ -19,4 +19,29 @@ console.log(shapeArea(1)) //--> 1
 console.log(shapeArea(2)) //--> 5
 console.log(shapeArea(3)) //--> 13
 
+/**
+ * Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, 
+ * each statue having an non-negative integer size. Since he likes to make things perfect,
+ *  he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. 
+ * He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues 
+ * needed.
 
+ * @param {*} statues 
+ * @returns 
+ */
+function makeConsecutiveArr(statues) {
+    let difference = 0
+    let sortedArr = statues.sort((a, b) => a - b)
+    for (let i = 0; i < sortedArr.length; i++) {
+        if (sortedArr[i + 1] !== undefined && sortedArr[i + 1] !== sortedArr[i] + 1) {
+            //look at the difference between the two numbers
+            difference += sortedArr[i + 1] - sortedArr[i] - 1
+        } else {
+            continue;
+        }
+    }
+    return difference
+}
+
+console.log(makeConsecutiveArr([6, 2, 3, 8]))
+console.log(makeConsecutiveArr([5, 4, 6]))
