@@ -43,5 +43,5 @@ function makeConsecutiveArr(statues) {
     return difference
 }
 
-console.log(makeConsecutiveArr([6, 2, 3, 8]))
-console.log(makeConsecutiveArr([5, 4, 6]))
+console.log(makeConsecutiveArr([6, 2, 3, 8])) //--> 3
+console.log(makeConsecutiveArr([5, 4, 6])) //--> 0

@@ -1556,3 +1556,45 @@ function largestPairSum(numbers) {
 console.log(largestPairSum([10, 14, 2, 23, 19]))
 console.log(largestPairSum([-100, -29, -24, -19, 19]))
 console.log(largestPairSum([-10, -8, -16, -18, -19]))
+
+/**Write a function that accepts fight string consists of only small letters and return who wins the fight.
+ *  When the left side wins return Left side wins!, when the right side wins return Right side wins!, i
+ * n other case return Let's fight again!. */
+
+function alphabetWar(fight) {
+    let count = 0
+    let leftObj = {
+        "s": 1,
+        "b": 2,
+        "p": 3,
+        "w": 4
+    }
+
+    let rightObj = {
+        "z": 1,
+        "d": 2,
+        "q": 3,
+        "m": 4
+    }
+
+    for (let i = 0; i < fight.length; i++) {
+        if (leftObj[fight[i]]) {
+            count += leftObj[fight[i]]
+        } else if (rightObj[fight[i]]) {
+            count -= rightObj[fight[i]]
+        }
+    }
+
+    console.log(count)
+    if (count > 0) {
+        return "Left side wins!"
+    } else if (count < 0) {
+        return "Right side wins!"
+    } else {
+        return "Let's fight again!"
+    }
+}
+
+console.log(alphabetWar("zzzzs"))  //=> Right side wins!
+console.log(alphabetWar("zdqmwpbs")) //=> Let's fight again!
+console.log(alphabetWar("wwwwwwz")) //=> Left side wins!
