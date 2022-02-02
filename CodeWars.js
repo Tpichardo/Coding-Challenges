@@ -1598,3 +1598,20 @@ function alphabetWar(fight) {
 console.log(alphabetWar("zzzzs"))  //=> Right side wins!
 console.log(alphabetWar("zdqmwpbs")) //=> Let's fight again!
 console.log(alphabetWar("wwwwwwz")) //=> Left side wins!
+
+
+/**
+ * Convert a hash into an array. sorted.
+ */
+function convertHashToArray(hash) {
+    //your code here - sort the keys!
+    let hashToArray = [];
+    for (const key in hash) {
+        hashToArray.push([`${key}`, hash[`${key}`]])
+    }
+    return hashToArray.sort();
+}
+
+console.log(convertHashToArray({ name: 'Jeremy', age: 24, role: 'Software Engineer' }))
+console.log(convertHashToArray({ name: "Jeremy", age: 24 }))
+console.log(convertHashToArray({ product: "CodeWars", powerLevelOver: 9000 }))
