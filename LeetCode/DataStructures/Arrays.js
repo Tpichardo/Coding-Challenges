@@ -42,3 +42,45 @@ console.log(pivotIndex([1, 7, 3, 6, 5, 6])); //=> 3
 console.log(pivotIndex([1, 2, 3])); //=> -1
 console.log(pivotIndex([2, 1, -1])); //=> 0
 
+/**
+ * You are given an integer array nums where the largest integer is unique.
+ * Determine whether the largest element in the array is at least twice as much as every other number in the array. 
+ * If it is, return the index of the largest element, or return -1 otherwise.
+ * @param {*} nums 
+ * @returns 
+ */
+
+const dominantIndex = (nums) => {
+    // let largestEl = Math.max(...nums);
+    // for (let i = 0; i < nums.length; i++) {
+    //     if ((nums[i] * 2) <= largestEl || nums[i] === largestEl) {
+    //         continue;
+    //     } else {
+    //         return -1
+    //     }
+    // }
+    // return nums.indexOf(largestEl);
+    let maxVal = 0;
+    let secondMax = 0;
+    let index = 0
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > maxVal) {
+            secondMax = maxVal;
+            maxVal = nums[i];
+            index = i;
+        } else if (nums[i] < maxVal && nums[i] > secondMax) {
+            secondMax = nums[i]
+        }
+    }
+
+    if ((secondMax * 2) <= maxVal) {
+        return index;
+    } else {
+        return -1
+    }
+};
+
+console.log(dominantIndex([3, 6, 1, 0])) //=> 1
+console.log(dominantIndex([1, 2, 3, 4])) //=> -1
+console.log(dominantIndex([1])) // => 0
+console.log(dominantIndex([0, 0, 3, 2])) // => -1
