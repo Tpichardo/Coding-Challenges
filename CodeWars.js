@@ -1615,3 +1615,4 @@ function convertHashToArray(hash) {
 console.log(convertHashToArray({ name: 'Jeremy', age: 24, role: 'Software Engineer' }))
 console.log(convertHashToArray({ name: "Jeremy", age: 24 }))
 console.log(convertHashToArray({ product: "CodeWars", powerLevelOver: 9000 }))
+
