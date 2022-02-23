@@ -109,32 +109,3 @@ console.log(plusOne([9]))// => [1, 0]
 console.log(plusOne([4, 3, 2, 1])) // => [4, 3, 2, 2]
 console.log(plusOne([9, 9])) //=> [1, 0, 0]
 console.log(plusOne([4, 3, 9, 9])) //=> [4, 4, 0, 0]
-
-const gridIndex = (grid, indices) => {
-    let flattenedGrid = grid.flat()
-    return indices.map(i => flattenedGrid[i - 1]).join('')
-
-    // let index = 1
-    // let gridObj = {}
-    // let outputString = ""
-
-    // for (let i = 0; i < grid.length; i++) {
-    //     for (let j = 0; j < grid[i].length; j++) {
-    //         gridObj[index++] = grid[i][j]
-    //     }
-    // }
-
-    // for (elem of indices) {
-    //     outputString += gridObj[elem]
-    // }
-    // return outputString
-}
-
-console.log(gridIndex([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 2, 3, 4, 5, 6, 7, 8, 9])) // => 'myexample'
-console.log(gridIndex([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 5, 6])) // => 'mam'
-
-
-
-const arr1 = [0, 1, 2, [3, 4]];
-let flat = arr1.flat()
-console.log(flat);
