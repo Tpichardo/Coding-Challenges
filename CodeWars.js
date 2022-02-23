@@ -1640,3 +1640,19 @@ const gridIndex = (grid, indices) => {
 console.log(gridIndex([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 2, 3, 4, 5, 6, 7, 8, 9])) // => 'myexample'
 console.log(gridIndex([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 5, 6])) // => 'mam'
 
+
+function findOddd(A) {
+    let map = new Map();
+    for (let i = 0; i < A.length; i++) {
+        if (map.has(A[i])) {
+            let val = map.get(A[i])
+            map.set(A[i], val += 1)
+        } else {
+            map.set(A[i], 1)
+        }
+    }
+    return map
+}
+
+console.log(findOddd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
+
