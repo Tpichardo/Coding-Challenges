@@ -1616,3 +1616,27 @@ console.log(convertHashToArray({ name: 'Jeremy', age: 24, role: 'Software Engine
 console.log(convertHashToArray({ name: "Jeremy", age: 24 }))
 console.log(convertHashToArray({ product: "CodeWars", powerLevelOver: 9000 }))
 
+
+const gridIndex = (grid, indices) => {
+    let flattenedGrid = grid.flat()
+    return indices.map(i => flattenedGrid[i - 1]).join('')
+
+    // let index = 1
+    // let gridObj = {}
+    // let outputString = ""
+
+    // for (let i = 0; i < grid.length; i++) {
+    //     for (let j = 0; j < grid[i].length; j++) {
+    //         gridObj[index++] = grid[i][j]
+    //     }
+    // }
+
+    // for (elem of indices) {
+    //     outputString += gridObj[elem]
+    // }
+    // return outputString
+}
+
+console.log(gridIndex([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 2, 3, 4, 5, 6, 7, 8, 9])) // => 'myexample'
+console.log(gridIndex([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 5, 6])) // => 'mam'
+
